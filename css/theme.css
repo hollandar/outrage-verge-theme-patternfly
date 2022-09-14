@@ -1,0 +1,99 @@
+:root {
+    --patternfly-component-margin: 4rem;
+    --pattermfly-component-tightness: 1rem;
+
+    --patternfly-twoup-gap: 2rem;
+    --patternfly-banner-height: 300px;
+    --patternfly-banner-textshadow: 3px 2px #fff;
+    --patternfly-banner-fontsize: var(--patternfly-fontsize-large);
+    --patternfly-banner-textpadding: 4rem;
+
+    --patternfly-fontsize-large: 200%;
+    --patternfly-fontsize-medium: 150%;
+
+    --patternfly-content-width: 90rem;
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --patternfly-fontsize-large: 300%;
+        --patternfly-fontsize-medium: 200%;
+    }
+}
+
+.lib-banner {
+    position: relative;
+    height: var(--patternfly-banner-height);
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.lib-banner img {
+    position: absolute;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.lib-banner h1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: var(--patternfly-banner-textpadding);
+    font-size: var(--patternfly-banner-fontsize);
+    text-shadow: var(--patternfly-banner-textshadow);
+}
+
+.lib-twoup {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "left" "right";
+    gap: var(--patternfly-twoup-gap);
+    margin-bottom: var(--patternfly-component-margin);
+}
+
+@media screen and (min-width: 1024px) {
+    .lib-twoup {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "left right";
+        }
+}
+
+.lib-twoup-left {
+    grid-area: left
+}
+
+.lib-twoup-right {
+    grid-area: right
+}
+
+.lib-twoup-left, .lib-twoup-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow:hidden;
+}
+
+.patternfly-center {
+    width: auto;
+    height: auto;
+    margin-bottom: var(--pattermfly-component-tightness);
+    text-align: center;
+}
+
+
+.patternfly-large h1, .patternfly-large h2, .patternfly-large h3, .patternfly-large h4, .patternfly-large h5, .patternfly-large h6, .patternfly-large p {
+    font-size: var(--patternfly-fontsize-large);
+}
+
+.patternfly-medium h1, .patternfly-medium h2, .patternfly-medium h3, .patternfly-medium h4, .patternfly-medium h5, .patternfly-medium h6, .patternfly-medium p {
+    font-size: var(--patternfly-fontsize-medium);
+}
+
+.patternfly-content {
+    max-width: var(--patternfly-content-width);
+    margin-left: auto;
+    margin-right: auto;
+}

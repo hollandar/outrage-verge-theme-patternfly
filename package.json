@@ -1,0 +1,14 @@
+{
+  "name": "outrage-verge-theme-patternfly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@patternfly/patternfly": "^4.210.2"
+  }
+}

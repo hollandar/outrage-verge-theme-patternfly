@@ -1,4 +1,22 @@
-name: webefinity
-copy:
-  - static/**/*
+name: patternfly
 template: theme.t.html
+copy:
+  - 
+    from: node_modules/@patternfly/patternfly/
+    glob: patternfly.min.css
+    to: theme/patternfly/css/
+  -
+    from: node_modules/@patternfly/patternfly/assets/
+    to: theme/patternfly/css/assets/
+  -
+    from: css/
+    glob: theme.css
+    to: theme/patternfly/css/
+exec:
+  install:
+    - 
+      cmd: npm install
+  prebuild:
+    - 
+      cmd: npm run build
+  postbuild:
