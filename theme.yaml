@@ -1,0 +1,4 @@
+name: webefinity
+copy:
+  - static/**/*
+template: theme.t.html
