@@ -12,6 +12,13 @@
     --patternfly-fontsize-medium: 150%;
 
     --patternfly-content-width: 90rem;
+
+    --pf-global--FontSize--md: 14pt;
+    --pf-global--FontSize--lg: 18pt;
+    --pf-global--FontSize--xl: 22pt;
+    --pf-global--FontSize--2xl: 26pt;
+    --pf-global--FontSize--3xl: 30pt;
+    --pf-global--FontSize--4xl: 34pt;
 }
 
 @media screen and (min-width: 1024px) {
