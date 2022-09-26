@@ -11,7 +11,7 @@
 
 <DefineSection name="body">
     <div class="pf-c-page">
-        <header class="pf-c-page__header">
+        <header class="pf-c-page__header" data-nosnippet>
             <div class="pf-c-page__header-brand">
                 <a href="#" class="pf-c-page__header-brand-link">
                     <a href="/">
@@ -35,10 +35,8 @@
             </div>
         </header>
         <main class="pf-c-page__main" tabindex="-1">
-            <section class="pf-c-page__main-section pf-m-fill pf-m-light pf-c-content">
-                <Section name="body" />
-            </section>
-            <section class="pf-c-page__main-section pf-m-no-fill">
+            <Section name="body" />
+            <section class="pf-c-page__main-section pf-m-no-fill" data-nosnippet>
                 $(copyrightMessage)
             </section>
         </main>

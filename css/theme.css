@@ -1,4 +1,6 @@
 :root {
+    
+    --lib-gap-flexwrap: 1rem;
     --patternfly-component-margin: 4rem;
     --pattermfly-component-tightness: 1rem;
 
@@ -13,7 +15,9 @@
 
     --patternfly-content-width: 90rem;
 
-    --pf-global--FontSize--md: 14pt;
+    --pf-global--FontSize--md1: 14pt;
+    --pf-global--FontSize--md2: 14pt;
+    --pf-global--FontSize--md4: 14pt;
     --pf-global--FontSize--lg: 18pt;
     --pf-global--FontSize--xl: 22pt;
     --pf-global--FontSize--2xl: 26pt;
@@ -81,6 +85,14 @@
     justify-content: center;
     flex-direction: column;
     overflow:hidden;
+}
+
+.lib-flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--lib-gap-flexwrap);
 }
 
 .patternfly-center {
