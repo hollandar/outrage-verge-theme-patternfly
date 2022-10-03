@@ -1,0 +1,41 @@
+<Json name="documents" from="blog/documents.json" />
+
+<div class="pf-l-gallery pf-m-gutter">
+    <ForEach name="document" in="documents.Documents" take="9">
+        <Define name="documentImg" value="$(document.Img)" default="static/blog/empty_article.jpg">
+            <div class="pf-l-gallery__item">
+                <div class="pf-c-card">
+                    <div class="pf-c-card__header">
+                        <div class="pf-c-card__header-main">
+                            <Picture src="$(documentImg)" />
+                        </div>
+                    </div>
+                    <div class="pf-c-card__title">
+                        <a href="$(document.Uri)" style="text-decoration: underline">
+                            $(document.Title) by $(document.By)
+                        </a>
+                    </div>
+                    <Optional if="$(document.Summary)">
+                        <div class="pf-c-card__body">
+                            $(document.Summary)
+                        </div>
+                    </Optional>
+                    <Optional if="$(document.Date)">
+                        <div class="pf-c-card__footer">
+                            $(document.Date)
+                        </div>
+                    </Optional>
+                </div>
+            </div>
+        </Define>
+    </ForEach>
+</div>
+
+<ForEach name="document" in="documents.Documents" skip="9">
+    <Header>
+        <h2>Older posts</h2>
+    </Header>
+    <ItemTemplate>
+        <a href="$(document.Uri)">$(document.Title) by $(document.By)</a><br />
+    </ItemTemplate>
+</ForEach>
