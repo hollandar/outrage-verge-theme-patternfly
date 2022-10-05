@@ -1,8 +1,8 @@
-<Json name="documents" from="blog/documents.json" />
+<Json name="documents" from="$(json)" />
 
 <div class="pf-l-gallery pf-m-gutter">
-    <ForEach name="document" in="documents.Documents" take="9">
-        <Define name="documentImg" value="$(document.Img)" default="static/blog/empty_article.jpg">
+    <ForEach name="document" in="documents.documents" take="9">
+        <Define name="documentImg" value="$(document.img)" default="static/blog/empty_article.jpg">
             <div class="pf-l-gallery__item">
                 <div class="pf-c-card">
                     <div class="pf-c-card__header">
@@ -11,18 +11,18 @@
                         </div>
                     </div>
                     <div class="pf-c-card__title">
-                        <a href="$(document.Uri)" style="text-decoration: underline">
-                            $(document.Title) by $(document.By)
+                        <a href="$(document.uri)" style="text-decoration: underline">
+                            $(document.title) by $(document.by)
                         </a>
                     </div>
-                    <Optional if="$(document.Summary)">
+                    <Optional if="$(document.summary)">
                         <div class="pf-c-card__body">
-                            $(document.Summary)
+                            $(document.summary)
                         </div>
                     </Optional>
-                    <Optional if="$(document.Date)">
+                    <Optional if="$(document.date)">
                         <div class="pf-c-card__footer">
-                            $(document.Date)
+                            $(document.date)
                         </div>
                     </Optional>
                 </div>
@@ -36,6 +36,6 @@
         <h2>Older posts</h2>
     </Header>
     <ItemTemplate>
-        <a href="$(document.Uri)">$(document.Title) by $(document.By)</a><br />
+        <a href="$(document.uri)">$(document.title) by $(document.by)</a><br />
     </ItemTemplate>
 </ForEach>

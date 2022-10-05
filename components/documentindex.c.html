@@ -1,0 +1,19 @@
+<Json name="index" from="$(json)" />
+
+<div class="overflow-scroll-h">
+    <ForEach name="section" in="index.sections">
+        <ItemTemplate>
+            <ForEach name="document" in="section.documents">
+                <Header>
+                    <h2 class="pf-c-title pf-m-xl">$(section.title)</h2>
+                </Header>
+                <ItemTemplate>
+                    <a href="$(document.uri)">$(document.title)</a><br />
+                </ItemTemplate>
+                <NotFound>
+                    No documents.
+                </NotFound>
+            </ForEach>
+        </ItemTemplate>
+    </ForEach>
+</div>

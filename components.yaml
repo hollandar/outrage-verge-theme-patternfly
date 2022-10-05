@@ -1,2 +1,4 @@
 Card: components/card.c.html
 PageSection: components/pagesection.c.html
+BlogIndex: components/blogindex.c.html
+DocumentIndex: components/documentindex.c.html
