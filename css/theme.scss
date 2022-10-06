@@ -1,0 +1,46 @@
+:root {
+    
+    --lib-gap-flexwrap: 1rem;
+    --patternfly-component-margin: 4rem;
+
+    --patternfly-twoup-gap: 2rem;
+    --patternfly-banner-height: 300px;
+    --patternfly-banner-textshadow: 3px 2px #fff;
+    --patternfly-banner-fontsize: var(--patternfly-fontsize-large);
+    --patternfly-banner-textpadding: 4rem;
+
+    --patternfly-fontsize-large: 200%;
+    --patternfly-fontsize-medium: 150%;
+
+    --patternfly-content-width: 90rem;
+
+    --pf-global--FontSize--md1: 14pt;
+    --pf-global--FontSize--md2: 14pt;
+    --pf-global--FontSize--md4: 14pt;
+    --pf-global--FontSize--lg: 18pt;
+    --pf-global--FontSize--xl: 22pt;
+    --pf-global--FontSize--2xl: 26pt;
+    --pf-global--FontSize--3xl: 30pt;
+    --pf-global--FontSize--4xl: 34pt;
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --patternfly-fontsize-large: 300%;
+        --patternfly-fontsize-medium: 200%;
+    }
+}
+
+.patternfly-large h1, .patternfly-large h2, .patternfly-large h3, .patternfly-large h4, .patternfly-large h5, .patternfly-large h6, .patternfly-large p {
+    font-size: var(--patternfly-fontsize-large);
+}
+
+.patternfly-medium h1, .patternfly-medium h2, .patternfly-medium h3, .patternfly-medium h4, .patternfly-medium h5, .patternfly-medium h6, .patternfly-medium p {
+    font-size: var(--patternfly-fontsize-medium);
+}
+
+.patternfly-content {
+    max-width: var(--patternfly-content-width);
+    margin-left: auto;
+    margin-right: auto;
+}

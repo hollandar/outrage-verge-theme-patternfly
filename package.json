@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": ""
+    "build": "npm run buildSass",
+    "buildSass": "sass -I ./css/ ./css/patternfly.theme.scss> ./css/patternfly.theme.css && cleancss -o ./css/patternfly.theme.min.css ./css/patternfly.theme.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clean-css": "^5.3.1",
+    "clean-css-cli": "^5.6.1",
+    "sass": "^1.55.0",
     "@patternfly/patternfly": "^4.210.2"
   }
 }
