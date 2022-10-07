@@ -12,8 +12,6 @@
     --patternfly-fontsize-large: 200%;
     --patternfly-fontsize-medium: 150%;
 
-    --patternfly-content-width: 90rem;
-
     --pf-global--FontSize--md1: 14pt;
     --pf-global--FontSize--md2: 14pt;
     --pf-global--FontSize--md4: 14pt;
@@ -39,8 +37,3 @@
     font-size: var(--patternfly-fontsize-medium);
 }
 
-.patternfly-content {
-    max-width: var(--patternfly-content-width);
-    margin-left: auto;
-    margin-right: auto;
-}
