@@ -24,7 +24,7 @@
                         <ul class="pf-c-nav__list">
                             <ForEach name="item" in="menu.menuItems">
                                 <OnLink uri="$(item.link)" currentClass="pf-m-current">
-                                    <li class="pf-c-nav__item $(_currentClass)">
+                                    <li class="pf-c-nav__item $(active_currentClass)">
                                         <a href="$(_uri)" class="pf-c-nav__link">$(item.label)</a>
                                     </li>
                                 </OnLink>
